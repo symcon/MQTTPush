@@ -15,7 +15,7 @@
             "columns": [
                 {
                     "name": "VariableID",
-                    "caption": "Meter",
+                    "caption": "Meter Value",
                     "width": "auto",
                     "add": 0,
                     "edit": {

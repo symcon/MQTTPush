@@ -4,11 +4,12 @@
             "Building Number": "Gebäudenummer",
             "Meters": "Zähler",
             "Metering Point Number": "Messstellennummer",
+            "Meter Value": "Zählerstand",
+            "MeterValue": "Zählerstand",
             "Meter Number": "Zählernummer",
             "MeterNumber": "Zählernummer",
             "Name": "Name",
             "Unit": "Messgröße",
-            "MeterValue": "Zählerstand",
             "Send everything": "Alles senden"
         }
     }
