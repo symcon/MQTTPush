@@ -2,7 +2,7 @@
     "id": "{18D3A65F-BAB1-4B5E-86D1-BD60542067A1}",
     "name": "MQTT Push List",
     "type": 3,
-    "vendor": "",
+    "vendor": "Symcon GmbH",
     "aliases": [],
     "parentRequirements": [
         "{043EA491-0325-4ADD-8FC2-A30C8EEB4D3F}"
@@ -12,5 +12,5 @@
         "{7F7632D9-FA40-4F38-8DEA-C83CD4325A32}"
     ],
     "prefix": "MQP",
-    "url": "https://www.maroszek.de"
+    "url": "https://www.symcon.de"
 }
