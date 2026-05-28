@@ -61,10 +61,8 @@ class MQTTPushList extends IPSModuleStrict
     public function UpdateReferences(): void
     {
         // Delete all registrations and re-add selected variables.
-        foreach ($this->GetReferenceList() as $senderID => $messages) {
-            foreach ($messages as $message) {
-                $this->UnregisterReference($senderID, $message);
-            }
+        foreach ($this->GetReferenceList() as $variableID) {
+            $this->UnregisterReference($variableID);
         }
     
         $entries = $this->GetEntries();
