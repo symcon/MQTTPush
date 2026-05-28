@@ -1,10 +1,10 @@
 {
     "id": "{4A64F6FB-49D7-4F9C-1F6D-095FDEB35DD4}",
     "name": "MQTT Push",
-    "author": "Michael Maroszek",
-    "url": "https://www.maroszek.de",
+    "author": "Symcon GmbH",
+    "url": "https://www.symcon.de",
     "compatibility": {
-        "version": "7.1"
+        "version": "9.0"
     },
     "version": "1.0",
     "build": 0,
