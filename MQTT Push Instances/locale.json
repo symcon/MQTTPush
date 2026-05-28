@@ -2,7 +2,7 @@
     "translations": {
         "de": {
             "BaseID": "BaseID",
-            "BaseTopic 2": "BaseTopic",
+            "BaseTopic": "BaseTopic",
             "Send everything": "Alles senden",
             "Interval": "Intervall",
             "minutes": "Minuten"

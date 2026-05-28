@@ -7,8 +7,6 @@ class MQTTPushVariables extends IPSModuleStrict
     {
         $this->RegisterPropertyInteger("BaseID", -1);
         $this->RegisterPropertyString("BaseTopic", "");
-
-        $this->ConnectParent('{F7A0DD2E-7684-95C0-64C2-D2A9DC47577B}');
     }
 
     public function ApplyChanges(): void
@@ -19,9 +17,17 @@ class MQTTPushVariables extends IPSModuleStrict
         $this->UpdateSubscription();
     }
 
-    public function ReceiveData($JSONString): string
+    public function MessageSink($TimeStamp, $SenderID, $Message, $Data): void
     {
-        return "";
+        if ($Message !== VM_UPDATE) {
+            return;
+        }
+        // Only send changes (HasDiff = true)
+        if (!$Data[1]) {
+            return;
+        }
+
+        $this->Send($this->GetLocation($SenderID), GetValueFormatted($SenderID));
     }
 
     public function UpdateSubscription(): void

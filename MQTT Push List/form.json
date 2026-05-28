@@ -1,0 +1,72 @@
+{
+    "elements": [
+        {
+            "type": "ValidationTextBox",
+            "name": "BuildingNumber",
+            "caption": "Building Number"
+        },
+        {
+            "type": "List",
+            "name": "Meters",
+            "caption": "Meters",
+            "add": true,
+            "delete": true,
+            "rowCount": 10,
+            "columns": [
+                {
+                    "name": "VariableID",
+                    "caption": "Meter",
+                    "width": "auto",
+                    "add": 0,
+                    "edit": {
+                        "type": "SelectVariable"
+                    }
+                },
+                {
+                    "name": "MeteringPointNumber",
+                    "caption": "Metering Point Number",
+                    "width": "180px",
+                    "add": "",
+                    "edit": {
+                        "type": "ValidationTextBox"
+                    }
+                },
+                {
+                    "name": "MeterNumber",
+                    "caption": "Meter Number",
+                    "width": "180px",
+                    "add": "",
+                    "edit": {
+                        "type": "ValidationTextBox"
+                    }
+                },
+                {
+                    "name": "Name",
+                    "caption": "Name",
+                    "width": "220px",
+                    "add": "",
+                    "edit": {
+                        "type": "ValidationTextBox"
+                    }
+                },
+                {
+                    "name": "Unit",
+                    "caption": "Unit",
+                    "width": "180px",
+                    "add": "",
+                    "edit": {
+                        "type": "ValidationTextBox"
+                    }
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Button",
+            "caption": "Send everything",
+            "onClick": "MQP_SendSnapshot($id);"
+        }
+    ],
+    "status": []
+}
