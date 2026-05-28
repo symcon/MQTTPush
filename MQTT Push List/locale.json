@@ -1,7 +1,7 @@
 {
     "translations": {
         "de": {
-            "Building Number": "Gebäudenummer",
+            "FM Number": "FM Nummer",
             "Meters": "Zähler",
             "Metering Point Number": "Messstellennummer",
             "Meter Value": "Zählerstand",

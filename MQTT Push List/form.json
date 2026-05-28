@@ -2,8 +2,13 @@
     "elements": [
         {
             "type": "ValidationTextBox",
+            "name": "BaseTopic",
+            "caption": "BaseTopic"
+        },
+        {
+            "type": "ValidationTextBox",
             "name": "BuildingNumber",
-            "caption": "Building Number"
+            "caption": "FM Number"
         },
         {
             "type": "List",

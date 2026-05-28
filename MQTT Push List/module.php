@@ -5,6 +5,7 @@ class MQTTPushList extends IPSModuleStrict
 {
     public function Create(): void
     {
+        $this->RegisterPropertyString("BaseTopic", "");
         $this->RegisterPropertyString('BuildingNumber', '');
         $this->RegisterPropertyString('Meters', '[]');
     }
@@ -168,12 +169,19 @@ class MQTTPushList extends IPSModuleStrict
 
     private function Send(string $topic, string $payload): void
     {
+        $baseTopic = $this->ReadPropertyString("BaseTopic");
+
+        // Append slash if not already given and base topic is not empty
+        if ($baseTopic !== "" && substr($baseTopic, -1) !== "/") {
+            $baseTopic .= "/";
+        }
+
         $packet = [];
         $packet['DataID'] = '{043EA491-0325-4ADD-8FC2-A30C8EEB4D3F}';
         $packet['PacketType'] = 3;
         $packet['QualityOfService'] = 0;
         $packet['Retain'] = false;
-        $packet['Topic'] = $topic;
+        $packet['Topic'] = $baseTopic . $topic;
         $packet['Payload'] = bin2hex($payload);
 
         $this->SendDebug($topic, $payload, 0);
